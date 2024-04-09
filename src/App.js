@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import LandingPageComponent from './pages/LandingPageComponent';
+import RegistrationComponent from './pages/RegistrationComponent';
+import LoginComponent from './pages/LoginComponent';
+import { AuthProvider } from './context api/authContext'; // Ensure proper import
+import Navbar from './components/navbar';
+import { useNavigate } from 'react-router-dom';
+
+function RedirectToLogin() {
+  const loggedInUser = localStorage.getItem("loggedInUser");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedInUser===null) {
+      navigate('/login');
+    }
+  }, [loggedInUser, navigate]);
+
+  return null; // Redirecting, so no need to render anything
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Navbar />
+      <Router>
+        <Routes>
+          <Route element={<RedirectToLogin />} /> {/* Use the wrapper component */}
+          <Route exact path="/" element={<LandingPageComponent />} />
+          <Route path="/registration" element={<RegistrationComponent />} />
+          <Route path="/login" element={<LoginComponent />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
