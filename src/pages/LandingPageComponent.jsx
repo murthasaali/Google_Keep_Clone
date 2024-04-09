@@ -10,7 +10,7 @@ function LandingPageComponent() {
   const [theme, setTheme] = useState("bg-stone-50");
   return (
     <div
-      className="w-full flex flex-col justify-start items-end px-28 h-screen relative text-black"
+      className="w-full flex flex-col justify-start items-end md:px-28 px-0 h-screen relative text-black"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -20,10 +20,10 @@ function LandingPageComponent() {
     >
       <SideBar />
 
-      <div className="w-[70%] h-[75%] bg-stone-100 bg-opacity-40 mt-20 absolute gap-4 flex p-3 flex-col overflow-y-scroll justify-start  items-start">
+      <div className=" xs:w-full md:w-[70%] h-[75%] bg-stone-100 bg-opacity-40 mt-20 absolute gap-4 flex p-3 flex-col overflow-y-scroll justify-start  items-start">
         <h1 className="font-thin text-4xl">Create Your Note </h1>
         <div
-          className={`w-[60%] h-auto p-3 flex justify-between flex-col  rounded-xl ${theme}`}
+          className={`md:w-[60%] w-full  h-auto p-3 flex justify-between flex-col  rounded-xl ${theme}`}
         >
           <div className="flex justify-between w-full relative">
             <input
@@ -95,21 +95,36 @@ function LandingPageComponent() {
             </button>
           </div>
         </div>
-        <div className="w-full   h-96 grid grid-cols-3 gap-4">
-    <div className=" bg-stone-100 p-3 rounded-lg h-32">
-        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+        <div className="w-full   h-96 grid grid-cols-3 md:gap-4 gap-1">
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
-    <div className=" bg-stone-100 p-3 rounded-lg h-32">
-        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
-    <div className=" bg-stone-100 p-3 rounded-lg h-32">
-        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
-    <div className=" bg-stone-100 p-3 rounded-lg h-32">
-        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
-    <div className=" bg-stone-100 p-3 rounded-lg h-32">
-        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
+        <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
 
 </div>
