@@ -3,7 +3,10 @@ import bg from "../assets/cool.jpg";
 import SideBar from "../components/sideBar";
 import { BiCloudUpload, BiImage } from "react-icons/bi";
 import { LuRedo2, LuUndo2 } from "react-icons/lu";
-
+import man from '../assets/hero.png'
+import a from '../assets/a.png'
+import gmail from '../assets/gmail.png'
+import github from '../assets/github.png'
 import painting from "../assets/paint.png";
 function LandingPageComponent() {
   const [dropDown, setDrpdownOpen] = useState(false);
@@ -22,7 +25,9 @@ function LandingPageComponent() {
 
       <div className="  md:w-[70%] w-full h-[75%] bg-stone-100 bg-opacity-40  mt-20   absolute gap-4 flex p-3 flex-col overflow-y-scroll justify-start  items-start">
         <h1 className="font-thin text-4xl">Create Your Note </h1>
-        <div
+   <div className="w-full flex justify-strat">
+    
+   <div
           className={`md:w-[60%] w-full   h-auto p-3 flex justify-between flex-col  rounded-xl ${theme}`}
         >
           <div className="flex justify-between w-full relative">
@@ -37,7 +42,7 @@ function LandingPageComponent() {
               <img className="h-7 w-7  hover:scale-110" src={painting} />
             </button>
             {dropDown && (
-              <div className="absolute top-11 z-[3] h-14 w-96 right-0 rounded-2xl justify-start px-3 items-center gap-2 rounded-tr-none flex bg-stone-100 border">
+              <div className="absolute top-11 z-[3] h-14 md:w-96 w-auto right-0 rounded-2xl justify-start px-3 items-center gap-2 rounded-tr-none flex bg-stone-100 border">
                 <button
                   onClick={() => setTheme("bg-stone-50")}
                   className="w-8 h-8 hover:scale-105 border bg-white rounded-full hover:border "
@@ -95,6 +100,18 @@ function LandingPageComponent() {
             </button>
           </div>
         </div>
+
+        <img src={man} className="h-64 w-44 hidden md:flex filter drop-shadow-xl "/>
+        <div className="w-60 h-full  relative md:flex hidden">
+            <img className="w-10 h-10 absolute bottom-6 top-10" src={a}/>
+            <img className="w-10 h-10 absolute top-2 right-5" src={gmail}/>
+            <img className="w-10 h-10 absolute top-20 right-20" src={github}/>
+
+        </div>
+
+    </div> 
+
+
         <div className="w-full   h-96 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-1">
     <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
         <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
