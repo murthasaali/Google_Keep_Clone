@@ -99,11 +99,19 @@ function LandingPageComponent() {
     <div className=" bg-stone-100 p-3 rounded-lg h-32">
         <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
     </div>
-    <div className=" bg-stone-100 rounded-lg h-32">Column 2</div>
-    <div className=" bg-stone-100 rounded-lg h-32">Column 3</div>
-    <div className=" bg-stone-100 rounded-lg h-32">Column 1</div>
-    <div className=" bg-stone-100 rounded-lg h-32">Column 2</div>
-    <div className=" bg-stone-100 rounded-lg h-32">Column 3</div>
+    <div className=" bg-stone-100 p-3 rounded-lg h-32">
+        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 p-3 rounded-lg h-32">
+        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 p-3 rounded-lg h-32">
+        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+    <div className=" bg-stone-100 p-3 rounded-lg h-32">
+        <div className="px-3 w-fit text-xl font-thin bg-black rounded-full text-white"> title</div>
+    </div>
+
 </div>
 
 
