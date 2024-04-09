@@ -95,7 +95,7 @@ function LandingPageComponent() {
             </button>
           </div>
         </div>
-        <div className="w-full   h-96 grid grid-cols-3 md:gap-4 gap-1">
+        <div className="w-full   h-96 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-1">
     <div className=" bg-stone-100 md:p-3 p-1 rounded-lg md:h-32 h-20">
         <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white"> title</div>
     </div>
