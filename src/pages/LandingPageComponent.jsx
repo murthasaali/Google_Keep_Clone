@@ -10,7 +10,7 @@ function LandingPageComponent() {
   const [theme, setTheme] = useState("bg-stone-50");
   return (
     <div
-      className="w-full flex flex-col justify-start items-end md:px-28 px-0 h-screen relative text-black"
+      className="w-full flex flex-col justify-start items-end md:px-28  px-0 h-screen relative text-black"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -20,10 +20,10 @@ function LandingPageComponent() {
     >
       <SideBar />
 
-      <div className="  md:w-[70%] h-[75%] bg-stone-100 bg-opacity-40 mt-20 absolute gap-4 flex p-3 flex-col overflow-y-scroll justify-start  items-start">
+      <div className="  md:w-[70%] w-full h-[75%] bg-stone-100 bg-opacity-40  mt-20   absolute gap-4 flex p-3 flex-col overflow-y-scroll justify-start  items-start">
         <h1 className="font-thin text-4xl">Create Your Note </h1>
         <div
-          className={`md:w-[60%] w-full  h-auto p-3 flex justify-between flex-col  rounded-xl ${theme}`}
+          className={`md:w-[60%] w-full   h-auto p-3 flex justify-between flex-col  rounded-xl ${theme}`}
         >
           <div className="flex justify-between w-full relative">
             <input
