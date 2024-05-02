@@ -9,6 +9,8 @@ import gmail from '../assets/gmail.png'
 import github from '../assets/github.png'
 import {AnimatePresence, motion} from "framer-motion"
 import painting from "../assets/paint.png";
+import Typewriter from 'typewriter-effect';
+
 function LandingPageComponent() {
   const [dropDown, setDrpdownOpen] = useState(false);
   const [theme, setTheme] = useState("bg-stone-50");
@@ -17,10 +19,12 @@ function LandingPageComponent() {
 
 
   return (
+    <div className="bg-gradient-to-r from-violet-500 to-indigo-500 area">
+		
     <div
-      className="w-full flex flex-col justify-start items-end md:px-28  px-0 h-screen relative text-black"
+      className="w-full z-50 flex flex-col justify-start items-end md:px-28  px-0 h-screen relative text-black"
       style={{
-        backgroundImage: `url(${bg})`,
+        // backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -28,9 +32,25 @@ function LandingPageComponent() {
     >
       <SideBar />
 
-      <div className="  md:w-[70%] w-full h-[75%] overflow-x-hidden bg-stone-100 bg-opacity-40  mt-20   absolute gap-4 flex  flex-col overflow-y-hidden justify-start  items-start">
+      <div className="  md:w-[70%] w-full h-[85%] overflow-x-hidden  bg-opacity-40  mt-20   absolute gap-4 flex  flex-col overflow-y-hidden justify-start  items-start">
       <div className="w-full h-full  relative overflow-x-hidden bg-opacity-40   p-3   gap-4 flex  flex-col overflow-y-scroll justify-start  items-start">
-      <h1 className="font-thin text-4xl">Create Your Note </h1>
+      <h1 className="font-bold text-white text-[50px]"> 
+      
+      <Typewriter
+      options={{loop:true}}
+  onInit={(typewriter) => {
+    typewriter.typeString('crate your ideas into notes!')
+      .callFunction(() => {
+        console.log('String typed out!');
+      })
+      .pauseFor(2500)
+      .deleteAll()
+      .callFunction(() => {
+        console.log('All strings were deleted');
+      })
+      .start();
+  }}
+/></h1>
    <div className="w-full flex justify-strat">
     
    <div
@@ -122,8 +142,9 @@ function LandingPageComponent() {
 
     <div className="w-full h-96 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-1">
   {titles.map((title, index) => (
-    <div key={index} className="bg-red-100 md:p-3 p-1 rounded-lg md:h-32 h-20" layoutId={index} onClick={() => setSelectedId(index)}>
-      <div className="px-3 w-fit md:text-xl text-md font-thin bg-black rounded-full text-white">
+    <div key={index} className="bg-red-100 md:p-3 p-1 relative hover:scale-105 transition-all duration-300 rounded-lg md:h-32 h-20" layoutId={index} onClick={() => setSelectedId(index)}>
+      <button className="right-0 absolute top-0"></button>
+      <div className="px-3 w-fit md:text-xl text-md font-normal  rounded-full text-black">
         {title}
       </div>
     </div>
@@ -156,6 +177,19 @@ function LandingPageComponent() {
       </div>
       </div>
     </div>
+    <ul class="circles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
   );
 }
 
